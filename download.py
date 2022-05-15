@@ -12,8 +12,9 @@ DATASETS = [
 ]
 DATADIR = "datasets/"
 
-for filename, url in DATASETS:
-    print("Downloading ")
-    with requests.get(url) as request:
-        with open(DATADIR + filename, 'wb') as file:
-            file.write(request.content)
+if __name__ == "__main__":
+    for filename, url in DATASETS:
+        print("Downloading ")
+        with requests.get(url) as request:
+            with open(DATADIR + filename, 'wb') as file:
+                file.write(request.content)
