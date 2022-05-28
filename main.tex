@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt,polish]{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{newtxtext}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[polish]{babel}
+\usepackage{biblatex}
+\usepackage{csquotes}
+
+\title{Ekonometria}
+\author{Piotr Krawiec 164165}
+\date{Maj 2022}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+%\section{Kilka słów o mnie}
+%Jestem studentem Politechniki Rzeszowskiej na kierunku Inżynieria i analiza danych, a od pół roku pracuję jako Data Scientist w Omniscopy. W ramach zajęć dodatkowych zarządzam i pomagam w projektach realizowanych w Kole naukowym Machine Learning \footnote{Moje projekty można znaleźć na \url{https://github.com/knmlprz}}, a w czasie wolnym biegam. Interesują mnie kreatywne zastosowania sztucznej inteligencji oraz metody objaśniania modeli czarnych skrzynek\footnote{Czym są czarne skrzynki \url{https://en.wikipedia.org/wiki/Black_box}}.
+
+\section{Wstęp}
+Celem projektu jest zbadanie co wpływa na to ile oszczędzają Polacy. Projekt składa się z 3 sekcji. Pierwsza \textit{Dane i ich źródła} opisuje
+jakie dane zebrałem, z jakich źródeł oraz to jaka zmienna opisywała oszczędności polaków. Druga, \textit{Kryteria doboru zmiennych} zawiera
+kryteria i metody doboru zmiennych do modelu liniowego, a ostatnia \textit{Model} przedstawia stworzony model oraz jego interpretację.
+
+\section{Dane i ich źródła}
+Dane zbierałem z wielu źródeł, są to m.\ in.:
+\begin{enumerate}
+    \item \url{https://data.worldbank.org/}
+    \item \url{https://data.oecd.org/}
+    \item \url{https://bdl.stat.gov.pl/}
+\end{enumerate}
+Oto lista zebranych zmiennych:
+\begin{itemize}
+    \item \textbf{Procent dochodu rozporządzalnego przeznaczany na oszczędności} – to zmienna, która
+    w moim modelu opisuje to ile oszczędzają Polacy. Pochodzi ona ze strony \url{https://data.oecd.org/hha/household-savings.htm}.
+    \item \textbf{Procent dochodu rozporzązdalnego przeznaczanego na spłatę długów} – została 
+    wybrana ponieważ stanowi procent dochodu rozporządzalnego. Zwiększenie/zmniejszenie
+    jej o punkt procentowy spowoduje zwiększenie/zmniejszenie łącznie o punkt procentowy 
+    pozostałych zmiennych opisujących procent dochodu rozporządalnego (w tym procentu 
+    dochodu przeznaczanego na oszczędności).
+    \item \textbf{Zmiana dochodu rozporządzalnego względem roku poprzeniego wyrażona w procentach} – wyraźna zmiana
+    dochodu rozporządzalnego może być niepokojącym sygnałem dla konsumentów, co może spowodować, że 
+    przeznaczą większy/mniejszy procent swojego dochodu rozporządalnego na oszczędności
+    \item \textbf{Zmiana sumy przeznaczanej na konsumpcję przez gospodarstwa domowe} zmianna ta 
+    opisuje odpowiedź konsumentów na sytuację na rynku.
+    \item \textbf{Jaki procent aktyw gospodarstw domowych stanowią gotówka i depozyty} zmiana tej wartości
+    sygnalizuje, iż gospodarstwa domowe lokują swoje oszczędności w innych źródłach, może bardziej pewnych
+    lub bardziej ryzykowynych. A może też sygnalizować, iż gospodarstwa domowe spieniężają 
+    swoje oszczędności.
+    \item \textbf{Rezerwy ubezpieczeń na życie (wyrażone w procetach zobowiązań, których pokrycie w środkach muszą posiadać ubezpieczyciele)}
+    zmienna ta nie opisuje gospodarstw domowych, ale ogólną sytuację na rynku/świecie. W
+    przypadku niepokojów społecznych itp.\ zmienna ta się zmieni, a więc reaguje w podobnych
+    sytuacjach oszczędności gospodarstw.
+    \item \textbf{Suma aktyw gospodarstw domowych w dolarach per capita} jak powyżej.
+    \item \textbf{Przeciętne roczne wynagrodzenie (dane z ZUSu)} – dodana ponieważ 
+    pewna jej część to dochód rozporządzalny. 
+    \item \textbf{Średnie stopy procentowe w danym roku} – zmienna ta ma wpływ na to ile pieniędzy
+    pozostaje w kieszeniach sporej części konsumentów posiadającej kredyty hipoteczne.
+    \item \textbf{Cena 1 m2 powierzchni użytkowej budynku mieszkalnego oddanego do użytkowania}
+    \item \textbf{Średnia stopa bezrobocia}
+    \item \textbf{Cena: olej jadalny rafinowany rzepakowy konfekcjonowany - za 1l} – olej wykorzystywany
+    jest w wielu daniach, wzrost jest ceny może zmniejszać dochód rozporządzalny.
+\end{itemize}
+
+\section{Kryteria doboru zmiennych}
+
+\section{Model}
+
+\subsection{}
+
+
+\end{document}
